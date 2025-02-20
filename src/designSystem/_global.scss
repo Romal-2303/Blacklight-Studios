@@ -6,8 +6,20 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
+  }
+}
+
 body {
-  background-color: $primary-100;
+  background-color: rgb(255, 255, 255);
 }
 
 ::-moz-selection {

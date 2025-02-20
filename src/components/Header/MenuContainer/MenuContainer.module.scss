@@ -1,0 +1,108 @@
+.menu-container {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  gap: 3rem;
+
+  .showcase-container {
+    cursor: pointer;
+  }
+
+  .services-container {
+    cursor: pointer;
+  }
+
+  .contactus-btn {
+    cursor: pointer;
+    position: relative;
+    padding: 0.8rem 0rem;
+    transition: all ease-in-out 0.2s;
+    width: 120px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      text-align: center;
+    }
+
+    &:hover {
+      background-color: #fa4c14;
+      color: white;
+      border-radius: 4px;
+    }
+  }
+
+  /* Corner Borders */
+  .contactus-btn::before,
+  .contactus-btn::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border: 2px solid #fa4c14;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .contactus-btn::before {
+    top: 0;
+    left: 0;
+    border-right: none;
+    border-bottom: none;
+  }
+
+  .contactus-btn:hover::before {
+    top: 3px;
+    left: 3px;
+    opacity: 0;
+  }
+  .contactus-btn:hover::after {
+    bottom: 3px;
+    right: 3px;
+    opacity: 0;
+  }
+
+  .contactus-btn::after {
+    bottom: 0;
+    right: 0;
+    border-left: none;
+    border-top: none;
+  }
+
+  /* Top-right & Bottom-left */
+  .contactus-btn span::before,
+  .contactus-btn span::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border: 2px solid #fa4c14;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .contactus-btn span::before {
+    top: 0;
+    right: 0;
+    border-left: none;
+    border-bottom: none;
+  }
+
+  .contactus-btn:hover span::before {
+    top: 3px;
+    right: 3px;
+    opacity: 0;
+  }
+  .contactus-btn:hover span::after {
+    bottom: 3px;
+    left: 3px;
+    opacity: 0;
+  }
+
+  .contactus-btn span::after {
+    bottom: 0;
+    left: 0;
+    border-right: none;
+    border-top: none;
+  }
+}
