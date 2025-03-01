@@ -116,7 +116,7 @@ const ParticleGroup = () => {
     for (let i = 0; i < particleCount; i++) {
       let theta = Math.random() * 2 * Math.PI;
       let phi = Math.acos(2 * Math.random() - 1);
-      let radius = 2.5 + Math.random() * 1;
+      let radius = 2.5 + Math.random() * 1.1;
 
       positions[i * 3] = radius * Math.sin(phi) * Math.cos(theta);
       positions[i * 3 + 1] = radius * Math.sin(phi) * Math.sin(theta);
