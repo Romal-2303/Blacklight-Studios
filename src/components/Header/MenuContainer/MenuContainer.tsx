@@ -2,6 +2,7 @@
 
 import TextSpinner from "@/components/TextSpinner/TextSpinner";
 import classes from "./MenuContainer.module.scss";
+import styles from "../../../designSystem/_classes.module.scss";
 import { useState } from "react";
 
 const MenuContainer = () => {
@@ -17,8 +18,16 @@ const MenuContainer = () => {
 
   return (
     <div className={classes["menu-container"]}>
-      <div className={classes["showcase-container"]}>Showcase</div>
-      <div className={classes["services-container"]}>Services</div>
+      <div
+        className={`${classes["showcase-container"]} ${styles["underline-on-hover"]}`}
+      >
+        Showcase
+      </div>
+      <div
+        className={`${classes["services-container"]} ${styles["underline-on-hover"]}`}
+      >
+        Services
+      </div>
       <div
         className={classes["contactus-btn"]}
         onMouseEnter={mouseEnterHandler}
@@ -28,7 +37,7 @@ const MenuContainer = () => {
           {!btnHovered ? (
             <>Contact Us</>
           ) : (
-            <TextSpinner content="Contact Us"></TextSpinner>
+            <TextSpinner speed={50} content="Contact Us"></TextSpinner>
           )}
         </span>
       </div>

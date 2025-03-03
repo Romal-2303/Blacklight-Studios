@@ -5,10 +5,14 @@
   gap: 3rem;
 
   .showcase-container {
+    position: relative;
+
     cursor: pointer;
   }
 
   .services-container {
+    position: relative;
+
     cursor: pointer;
   }
 
@@ -28,8 +32,8 @@
     }
 
     &:hover {
-      background-color: #046a38;
-      color: white;
+      background-color: #07c569;
+      color: black;
       border-radius: 4px;
     }
   }
@@ -41,7 +45,7 @@
     position: absolute;
     width: 5px;
     height: 5px;
-    border: 2px solid #046a38;
+    border: 2px solid #07c569;
     transition: all 0.3s ease-in-out;
   }
 
@@ -77,7 +81,7 @@
     position: absolute;
     width: 5px;
     height: 5px;
-    border: 2px solid #046a38;
+    border: 2px solid #07c569;
     transition: all 0.3s ease-in-out;
   }
 

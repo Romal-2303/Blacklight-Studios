@@ -34,7 +34,7 @@ const TextSpinner = ({ content, speed = 40 }: TextSpinnerProps) => {
       return textArr;
     };
 
-    const scrambledTexts = generateScrambledTexts("Contact Us");
+    const scrambledTexts = generateScrambledTexts(content);
 
     let index = 0;
 
