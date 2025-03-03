@@ -1,9 +1,7 @@
 @use "../../designSystem/library" as *;
 
 .homepage-container {
-  height: 100vh;
   position: relative;
   background-color: $primary-100;
-
-  font-family: $font-septenary;
+  font-family: $font-primary;
 }

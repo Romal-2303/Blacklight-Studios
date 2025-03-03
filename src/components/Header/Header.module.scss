@@ -3,13 +3,13 @@
 .header-container {
   height: 90px;
   width: 100%;
-  font-family: $font-tertiary;
   backdrop-filter: blur(2px);
   padding: 0 2rem;
   position: fixed;
   top: 0;
   z-index: 11;
   color: white;
+  font-family: $font-primary;
 
   .header-content {
     display: flex;
@@ -35,7 +35,6 @@
     }
 
     .menu-container {
-      font-family: $font-septenary;
       justify-content: end;
     }
   }
