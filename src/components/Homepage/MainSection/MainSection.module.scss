@@ -1,0 +1,118 @@
+@use "../../../designSystem/library" as *;
+
+.mainsection-container {
+  display: flex;
+  position: relative;
+  height: 100%;
+
+  .particle-group-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .sm-links-section {
+    flex: 0.05;
+    position: relative;
+
+    .link-holder {
+      position: absolute;
+      top: 50%;
+      left: calc(-50% - 4rem);
+      transform: rotate(-90deg) translateY(-0%);
+      display: flex;
+      gap: 4rem;
+
+      .sm-link {
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+        position: relative;
+      }
+    }
+  }
+
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex: 1;
+    margin-left: -4rem;
+
+    .hero-subheading {
+      padding: 0.2rem 0.6rem;
+      color: BLACK;
+      font-weight: 500;
+      background-color: $primary-200;
+    }
+
+    .hero-text {
+      font-size: 64px;
+      font-weight: 400;
+      margin-top: 0.5rem;
+    }
+
+    .hero-description-container {
+      position: absolute;
+      bottom: 3rem;
+      right: 5rem;
+      width: 380px;
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+
+      .hero-description-text {
+        line-height: 22px;
+      }
+    }
+
+    .promotion-card {
+      position: absolute;
+      right: 1.5rem;
+      bottom: 1.5rem;
+      height: 225px;
+      width: 385px;
+      border: 1px solid white;
+      clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0 100%, 0% 25%);
+      background-color: white;
+
+      .promotion-card-child {
+        position: absolute;
+        width: 383px;
+        height: 223px;
+        background-color: rgba(28, 28, 28);
+        clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0 100%, 0% 25%);
+
+        .explore-btn {
+          background-color: #ffffff;
+          position: absolute;
+          bottom: 0.6rem;
+          left: 0.6rem;
+          padding: 0.6rem 0rem;
+          border-radius: 4px;
+          font-size: 14px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 0.2rem;
+          width: 130px;
+          cursor: pointer;
+          color: black;
+        }
+
+        .card-desc {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: right;
+          font-size: 14px;
+          margin-top: 2.5rem;
+          padding: 0rem 0.6rem;
+        }
+      }
+    }
+  }
+}

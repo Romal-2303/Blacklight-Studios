@@ -11,6 +11,8 @@
   }
 }
 
+// While using this class give the parent class position: relative;
+
 .underline-on-hover {
   &::after {
     content: "";

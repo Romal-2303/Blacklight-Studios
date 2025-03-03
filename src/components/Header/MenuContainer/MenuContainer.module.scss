@@ -1,3 +1,5 @@
+@use "../../../designSystem/library" as *;
+
 .menu-container {
   display: flex;
   align-items: center;
@@ -32,7 +34,7 @@
     }
 
     &:hover {
-      background-color: #07c569;
+      background-color: $primary-200;
       color: black;
       border-radius: 4px;
     }
@@ -45,7 +47,7 @@
     position: absolute;
     width: 5px;
     height: 5px;
-    border: 2px solid #07c569;
+    border: 2px solid $primary-200;
     transition: all 0.3s ease-in-out;
   }
 
@@ -81,7 +83,7 @@
     position: absolute;
     width: 5px;
     height: 5px;
-    border: 2px solid #07c569;
+    border: 2px solid $primary-200;
     transition: all 0.3s ease-in-out;
   }
 
