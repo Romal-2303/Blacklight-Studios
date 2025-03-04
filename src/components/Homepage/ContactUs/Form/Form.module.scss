@@ -1,0 +1,79 @@
+.form-container {
+  position: absolute;
+  left: 50%;
+  bottom: -110%;
+  transform: translate(-50%, -0%);
+  width: 95%;
+  height: 550px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  background-color: #e6f7ee;
+  transition: all linear 0.2s;
+
+  .form-content-container {
+    height: 100%;
+    width: 50%;
+    padding-left: 2rem;
+    padding-top: 1rem;
+
+    .form-row {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    input,
+    .message-input {
+      border: 1px solid black;
+      border-radius: 4px;
+      outline: none;
+      padding: 1rem;
+      width: 100%;
+    }
+
+    /* For Chrome, Safari, Edge, Opera */
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* For Firefox */
+    input[type="number"] {
+      -moz-appearance: textfield;
+    }
+
+    .message-input {
+      height: 230px;
+      letter-spacing: 1px;
+      resize: none;
+    }
+
+    .submit-btn {
+      border: none;
+      outline: none;
+      background-color: black;
+      color: white;
+      padding: 1rem 2rem;
+      margin-top: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  }
+
+  .close-icon-container {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    cursor: pointer;
+  }
+
+  .object-container {
+    width: 45%;
+  }
+}
+
+.form-visible {
+  bottom: 0rem;
+  transition: all linear 0.2s;
+}

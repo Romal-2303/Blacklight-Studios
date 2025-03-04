@@ -4,9 +4,14 @@ import classes from "./TextSpinner.module.scss";
 interface TextSpinnerProps {
   content: string;
   speed?: number;
+  lettersToNotRotate?: number;
 }
 
-const TextSpinner = ({ content, speed = 40 }: TextSpinnerProps) => {
+const TextSpinner = ({
+  content,
+  speed = 40,
+  lettersToNotRotate = 5,
+}: TextSpinnerProps) => {
   const [displayText, setDisplayText] = useState(content);
 
   useEffect(() => {
@@ -20,7 +25,7 @@ const TextSpinner = ({ content, speed = 40 }: TextSpinnerProps) => {
           .map((char, charIndex) =>
             char === " "
               ? " "
-              : charIndex < 5
+              : charIndex < lettersToNotRotate
               ? char
               : chars[Math.floor(Math.random() * chars.length)]
           )

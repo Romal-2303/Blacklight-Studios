@@ -1,0 +1,78 @@
+@use "../../../designSystem/library" as *;
+
+.contact-us-container {
+  margin-top: 3rem;
+  position: relative;
+  padding: 2rem 3rem 2rem 3rem;
+  overflow-y: hidden;
+
+  .heading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+    .section-header {
+      text-align: center;
+      font-size: 64px;
+      font-weight: 500;
+      width: 770px;
+    }
+
+    .lets-talk-btn {
+      padding: 1rem 0rem;
+      border-radius: 4px;
+      background-color: $primary-200;
+      margin-top: 2rem;
+      font-weight: 500;
+      font-size: 18px;
+      text-align: center;
+      cursor: pointer;
+      width: 140px;
+    }
+  }
+
+  .tags-container {
+    display: flex;
+    margin-top: 4rem;
+    width: 400px;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+
+    .tag-1,
+    .tag-2,
+    .tag-3 {
+      padding: 0.6rem 1.2rem;
+      background-color: #5de6a9;
+      border-radius: 8px;
+      width: fit-content;
+      cursor: pointer;
+    }
+  }
+
+  .icons-copyright-container {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+
+    .icons-container {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      gap: 1rem;
+      margin-top: 3rem;
+      cursor: pointer;
+    }
+
+    .copyright-container {
+      display: flex;
+      justify-content: center;
+      align-items: end;
+      gap: 1rem;
+      margin-top: 1.4rem;
+      font-family: $font-secondary;
+      font-size: 14px;
+    }
+  }
+}
