@@ -79,18 +79,16 @@ const ContactUs = () => {
         </div>
 
         <div className={classes["copyright-container"]}>
-          © ID Studio Web Agency Ltd.Privacy
-          <p>Policy</p>
+          © Blacklight Studios Agency Ltd.
+          <p>Privacy Policy</p>
           <p> Terms & Conditions</p>
         </div>
       </div>
 
-      {
-        <Form
-          formVisbility={formVisibility}
-          setFormVisibility={setFormVisibility}
-        />
-      }
+      <Form
+        formVisbility={formVisibility}
+        setFormVisibility={setFormVisibility}
+      />
     </div>
   );
 };

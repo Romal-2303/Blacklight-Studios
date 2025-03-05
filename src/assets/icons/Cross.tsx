@@ -16,9 +16,9 @@ const Cross = (props: Props) => {
       <path
         d="M1.40289 0.999939L9.40289 8.99994M1.40289 8.99994L9.40289 0.999939"
         stroke={props.color || "#97A0AF"}
-        stroke-width="1.2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
