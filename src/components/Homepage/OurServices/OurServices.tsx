@@ -5,6 +5,7 @@ import classes from "./OurServices.module.scss";
 import { motion } from "framer-motion";
 import TextSpinner from "@/components/TextSpinner/TextSpinner";
 
+
 const services = [
   {
     id: 1,
