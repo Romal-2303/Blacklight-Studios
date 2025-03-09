@@ -3,6 +3,7 @@ import classes from "./Homepage.module.scss";
 import AboutUs from "./AboutUs/AboutUs";
 import ContactUs from "./ContactUs/ContactUs";
 import OurServices from "./OurServices/OurServices";
+import Pricing from "./Pricing/Pricing";
 
 const Homepage = () => {
   return (
@@ -10,6 +11,7 @@ const Homepage = () => {
       <MainSection />
       <AboutUs />
       <OurServices />
+      <Pricing />
       <ContactUs />
     </div>
   );

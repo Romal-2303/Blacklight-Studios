@@ -3,14 +3,14 @@
 .our-services-container {
   display: flex;
   gap: 1rem;
-  padding: 0rem 3rem;
+  padding: 0rem 2rem;
   color: white;
   margin-top: 2rem;
   flex-direction: column;
-//   padding-bottom: 4rem;
 
   .our-services-content-container {
     flex: 1;
+
     .our-services-heading {
       font-size: 64px;
     }
@@ -28,15 +28,19 @@
     display: flex;
     justify-content: flex-end;
     color: black;
-    padding-right: 3rem;
 
     .contact-us {
-      background-color: white;
-      padding: 10px 30px;
-      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $primary-200;
+      border-radius: 4px;
       font-size: 16px;
+      padding: 0.6rem 0;
       cursor: pointer;
       margin-bottom: 2rem;
+      color: white;
+      width: 130px;
     }
 
     .contact-us:hover {
@@ -52,18 +56,18 @@
     grid-auto-rows: auto;
 
     .box {
-      border: 1px solid white;
       border-radius: 10px;
-      padding: 16px;
+      padding: 1rem 1rem 1.5rem 1rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      border: 1px solid white;
 
-      .number {
-        background-color: white;
+      .number-container {
+        background-color: $primary-200;
         color: black;
         width: 36px;
-        padding: 12px;
+        height: 36px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -71,13 +75,15 @@
       }
 
       .box-body {
-        h3 {
+        .card-title {
           font-size: 28px;
           margin-bottom: 10px;
         }
 
-        p {
-          font-size: 16px;
+        .card-desc {
+          line-height: 18px;
+          font-size: 14px;
+          font-family: $font-secondary;
         }
       }
     }

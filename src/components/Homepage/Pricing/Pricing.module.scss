@@ -1,0 +1,98 @@
+@use "../../../designSystem/library" as *;
+
+.pricing-section-container {
+  margin-top: 3rem;
+  position: relative;
+  height: 630px;
+
+  .section-header {
+    font-size: 200px;
+    text-align: center;
+    color: white;
+    // color: $primary-200;
+  }
+
+  .content-container {
+    position: absolute;
+    top: 22%;
+    width: 100%;
+    height: 530px;
+    display: flex;
+    gap: 0.8rem;
+    padding: 0rem 8rem;
+
+    .card-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 0.5px solid $gray-800;
+      flex: 1;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      color: white;
+      padding: 1.6rem;
+
+      .card-header-container {
+        .card-title {
+          font-size: 14px;
+          font-family: $font-secondary;
+        }
+
+        .card-price {
+          color: $primary-200;
+          font-size: 54px;
+          margin-top: 1rem;
+          font-weight: 500;
+        }
+
+        .horizontal-separator {
+          width: calc(100% + 3.2rem);
+          height: 1px;
+          background-color: $gray-800;
+          margin-top: 2rem;
+          margin-left: -1.6rem;
+        }
+      }
+
+      .card-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        margin: 3rem 0rem;
+        font-size: 14px;
+
+        .feature-container {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+
+          .tick-container {
+            border: 1px solid $gray-800;
+            width: 18px;
+            height: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+          }
+        }
+      }
+
+      .get-started-btn {
+        width: 100%;
+        padding: 0.6rem 0rem;
+        border-radius: 12px;
+        background: none;
+        border: 1px solid $gray-800;
+        color: white;
+        transition: all linear 0.2s;
+        cursor: pointer;
+
+        &:hover {
+          background-color: rgb(121, 121, 121, 0.2);
+        }
+      }
+    }
+  }
+}
