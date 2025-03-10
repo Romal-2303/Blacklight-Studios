@@ -3,6 +3,7 @@
 import Tick from "@/assets/icons/Tick";
 import classes from "./Pricing.module.scss";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 let pricingArr = [
   {
@@ -43,7 +44,7 @@ let pricingArr = [
 const Pricing = () => {
   const cardVariants = {
     hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
     // hover: { scale: 1.02, transition: { duration: 0.3 } },
   };
 
@@ -58,7 +59,7 @@ const Pricing = () => {
             initial="hidden"
             whileInView="visible"
             whileHover="hover"
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: false, amount: 0.15 }}
             variants={cardVariants}
           >
             <div className={classes["card-header-container"]}>
@@ -76,16 +77,17 @@ const Pricing = () => {
                 </div>
               ))}
             </div>
-            <button
+            <motion.button
               style={
                 cardIndex === 1
                   ? { backgroundColor: "white", color: "black" }
                   : {}
               }
               className={classes["get-started-btn"]}
+              whileTap={{ scale: 0.9 }}
             >
               Get Started
-            </button>
+            </motion.button>
           </motion.div>
         ))}
       </div>
