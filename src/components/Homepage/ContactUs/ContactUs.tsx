@@ -16,13 +16,15 @@ const ContactUs = () => {
   useEffect(() => {
     if (formVisibility) {
       // Disable scrolling
-      document.body.style.overflow = "hidden";
+      document.body.style.overflowY = "hidden";
     } else {
-      document.body.style.overflow = "auto"; // Enable scrolling
+      document.body.style.overflowX = "hidden";
+      document.body.style.overflowY = "auto";
     }
 
     return () => {
-      document.body.style.overflow = "auto"; // Cleanup on unmount
+      document.body.style.overflowX = "hidden";
+      document.body.style.overflowY = "auto";
     };
   }, [formVisibility]);
 

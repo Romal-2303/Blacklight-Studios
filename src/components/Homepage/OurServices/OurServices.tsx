@@ -5,7 +5,6 @@ import classes from "./OurServices.module.scss";
 import { motion } from "framer-motion";
 import TextSpinner from "@/components/TextSpinner/TextSpinner";
 
-
 const services = [
   {
     id: 1,
@@ -41,7 +40,7 @@ const services = [
 
 const OurServices = () => {
   const [btnHovered, setBtnHovered] = useState(false);
-  const [hoveredBox, setHoveredBox] = useState(null);
+  const [hoveredBox, setHoveredBox] = useState<number | null>(null);
 
   return (
     <div className={classes["our-services-container"]}>
@@ -97,18 +96,18 @@ const OurServices = () => {
             }}
           >
             <div
-              className={classes["number"]}
+              className={classes["number-container"]}
               style={{
                 backgroundColor:
-                  hoveredBox === service.id ? "#1c1c1c" : "white",
+                  hoveredBox === service.id ? "#1c1c1c" : "#07c569",
                 color: hoveredBox === service.id ? "white" : "#1c1c1c",
                 transition:
                   "background-color 0.6s ease-in-out, color 0.6s ease-in-out",
               }}
             >{`0${service.id}`}</div>
             <div className={classes["box-body"]}>
-              <h3>{service.title}</h3>
-              <p>{service.description}</p>
+              <h3 className={classes["card-title"]}>{service.title}</h3>
+              <p className={classes["card-desc"]}>{service.description}</p>
             </div>
           </motion.div>
         ))}

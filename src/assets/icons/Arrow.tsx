@@ -23,9 +23,9 @@ const Arrow = ({
       <path
         d="M1 1.25L4.5 4.75L8 1.25"
         stroke={color}
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
+        strokeWidth="1"
+        // strokeLinecap="round"
+        // strokeLinejoin="round"
       />
     </svg>
   );
