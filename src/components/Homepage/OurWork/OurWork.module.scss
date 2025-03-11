@@ -1,0 +1,102 @@
+@use "../../../designSystem/library" as *;
+
+.our-work-container {
+  width: 100%;
+  margin-top: 4rem;
+  display: flex;
+  padding: 0rem 2rem;
+
+  .our-work-title {
+    flex: 0.6;
+
+    .title {
+      font-size: 64px;
+      color: white;
+    }
+
+    .desc {
+      font-family: $font-secondary;
+      color: $gray-600;
+      margin-top: 1rem;
+      width: 90%;
+      line-height: 24px;
+      font-size: 14px;
+    }
+  }
+
+  .our-work-display-section {
+    gap: 2rem;
+    flex: 1;
+    border-left: 1px solid $gray-800;
+    padding: 0rem 2rem;
+    height: 500px;
+    overflow-y: scroll;
+
+    .row-1 {
+      height: 400px;
+      width: 100%;
+
+      .visit-text {
+        position: relative;
+        font-size: 20px;
+        color: white;
+        margin-top: 0.5rem;
+        width: fit-content;
+        cursor: pointer;
+      }
+    }
+
+    .card-hovered {
+      filter: brightness(0.8);
+    }
+
+    .row-2 {
+      display: flex;
+      gap: 2rem;
+      height: 280px;
+      margin-top: 4rem;
+
+      .work-2 {
+        flex: 1;
+
+        .visit-text {
+          position: relative;
+          font-size: 20px;
+          color: white;
+          margin-top: 0.5rem;
+          width: fit-content;
+          cursor: pointer;
+        }
+      }
+
+      .work-3 {
+        flex: 1;
+
+        .visit-text {
+          position: relative;
+          font-size: 20px;
+          color: white;
+          width: fit-content;
+          margin-top: 0.5rem;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .row-3 {
+      height: 400px;
+      width: 100%;
+      margin-top: 4rem;
+      padding-bottom: 4rem;
+
+      .visit-text {
+        position: relative;
+        font-size: 20px;
+        color: white;
+        margin-top: 0.5rem;
+        width: fit-content;
+        cursor: pointer;
+      }
+    }
+  }
+}

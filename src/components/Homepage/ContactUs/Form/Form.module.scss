@@ -1,14 +1,16 @@
 .form-container {
   position: absolute;
   left: 50%;
-  bottom: -110%;
+  bottom: 0%;
   transform: translate(-50%, -0%);
   width: 95%;
-  height: 550px;
+  height: 0px;
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
   background-color: #f8fffb;
   transition: all linear 0.2s;
+  display: flex;
+  overflow-y: hidden;
 
   .form-content-container {
     height: 100%;
@@ -54,9 +56,10 @@
       outline: none;
       background-color: black;
       color: white;
-      padding: 1rem 2rem;
+      padding: 1rem 0rem;
       margin-top: 1rem;
       border-radius: 8px;
+      width: 110px;
       cursor: pointer;
     }
   }
@@ -69,11 +72,17 @@
   }
 
   .object-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
     width: 45%;
+    margin-top: 1rem;
   }
 }
 
 .form-visible {
-  bottom: 0rem;
+  // bottom: 0rem
+  height: 550px;
   transition: all linear 0.2s;
 }

@@ -4,6 +4,8 @@ import GlobeCanvas from "../WireFrame/WireFrame";
 import CursorRipples from "../WireFrame/CursorRipple";
 import { useState } from "react";
 import TextSpinner from "@/components/TextSpinner/TextSpinner";
+import FuturisticPeople from "../../../../assets/icons/FuturisticPeople.svg";
+import { motion } from "framer-motion";
 
 interface FormProps {
   formVisbility: boolean;
@@ -52,10 +54,12 @@ const Form = ({ formVisbility, setFormVisibility }: FormProps) => {
           />
         </div>
 
-        <button
+        <motion.button
           className={classes["submit-btn"]}
           onMouseEnter={mouseEnterHandler}
           onMouseLeave={mouseLeaveHandler}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 1 }}
         >
           {!btnHovered ? (
             <>Submit</>
@@ -66,11 +70,11 @@ const Form = ({ formVisbility, setFormVisibility }: FormProps) => {
               lettersToNotRotate={2}
             ></TextSpinner>
           )}
-        </button>
+        </motion.button>
       </div>
-      {/* <div className={classes["object-container"]}>
-        <GlobeCanvas />
-      </div> */}
+      <div className={classes["object-container"]}>
+        <FuturisticPeople height="500px" />
+      </div>
       <div
         className={classes["close-icon-container"]}
         onClick={closeClickHandler}

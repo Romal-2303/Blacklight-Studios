@@ -7,24 +7,39 @@ import { motion } from "framer-motion";
 
 let testimonialsArr = [
   {
-    name: "John Smith",
-    designation: "CEO of Partner Marketing",
+    name: "Mark Stevens",
+    designation: "CEO at BrightTech Solutions",
     img: "",
     comment:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus deleniti ab illo repellendus blanditiis consectetur excepturi labore a perferendis libero?",
+      "Our website went from outdated to modern and sleek in no time. The process was smooth, and the final result exceeded expectations. Highly recommend!",
   },
   {
-    name: "John Smith",
-    designation: "CEO of Partner Marketing",
-    img: "",
-    comment: "Tomorrow night I am gonna smash your boy",
-  },
-  {
-    name: "John Smith",
-    designation: "CEO of Partner Marketing",
+    name: "Sarah Patel",
+    designation: "Marketing Director at NexaGrowth",
     img: "",
     comment:
-      "From eye-catching visuals to intuitive user experiences, our creative design services breathe life into your brand, ensuring memorable interactions that resonate with your audience.",
+      "We needed a business website that not only looked great but also performed well. The team delivered a high-quality site with impressive speed and optimization!",
+  },
+  {
+    name: "James O’Connor",
+    designation: "Founder of Elevate Commerce",
+    img: "",
+    comment:
+      "Our enterprise website was built with scalability in mind. The seamless user experience and high performance have directly impacted our conversions",
+  },
+  {
+    name: "Emily Carter",
+    designation: "COO at Horizon Ventures",
+    img: "",
+    comment:
+      "We struggled with low engagement until we got a complete website revamp. The new design, responsiveness, and SEO improvements have significantly boosted traffic!",
+  },
+  {
+    name: "David Thompson",
+    designation: "Managing Partner at Urban Edge Design",
+    img: "",
+    comment:
+      "From concept to execution, the team understood our vision and brought it to life. The result was a website that truly represents our brand.",
   },
 ];
 

@@ -39,10 +39,10 @@ const MainSection = () => {
         <h1 className={classes["hero-text"]}>Building the Future of Web</h1>
         <div className={classes["hero-description-container"]}>
           <p className={classes["hero-description-text"]}>
-            Innovative. Scalable. Future-proof. We craft digital solutions that
-            stand the test of time. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Quibusdam in quae aut libero fugiat architecto
-            itaque. Libero quis ad rem?
+            We craft digital solutions that go beyond aesthetics—designed for
+            performance, impact, and scalability. Whether you're a startup or an
+            enterprise, we turn bold ideas into reality. Let's build something
+            extraordinary together.
           </p>
           <GetInTouchBtn />
         </div>
