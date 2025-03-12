@@ -73,7 +73,7 @@ const ParticleGroup = () => {
     window.addEventListener("resize", handleResize);
 
     return () => {
-      mountRef.current.removeChild(renderer.domElement);
+      mountRef.current?.removeChild(renderer.domElement);
       window.removeEventListener("resize", handleResize);
     };
   }, []);

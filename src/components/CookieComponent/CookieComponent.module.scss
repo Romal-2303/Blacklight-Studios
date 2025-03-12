@@ -1,0 +1,68 @@
+@use "../../designSystem/library" as *;
+
+.cookie-card {
+  position: fixed;
+  left: 1.5rem;
+  bottom: 1.5rem;
+  height: 200px;
+  width: 450px;
+  border: 1px solid white;
+  clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0 100%, 0% 25%);
+  background-color: white;
+  color: white;
+  font-family: $font-primary;
+
+  .cookie-card-child {
+    position: absolute;
+    width: 448px;
+    height: 198px;
+    background-color: rgba(28, 28, 28);
+    clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0 100%, 0% 25%);
+
+    .accept-btn,
+    .reject-btn {
+      background-color: #ffffff;
+      position: absolute;
+      bottom: 0.6rem;
+      padding: 0.6rem 0rem;
+      border-radius: 4px;
+      font-size: 14px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.2rem;
+      width: 130px;
+      cursor: pointer;
+      color: black;
+    }
+
+    .accept-btn {
+      font-weight: bold;
+      right: calc(130px + 1.5rem);
+    }
+
+    .reject-btn {
+      right: 0.6rem;
+      background-color: $gray-700;
+    }
+
+    .card-desc {
+      // display: flex;
+      // align-items: right;
+      // justify-content: right;
+      text-align: right;
+      font-size: 14px;
+      margin-top: 3.5rem;
+      padding: 0rem 0.6rem;
+      line-height: 18px;
+
+      u {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.cookie-card-hidden {
+  display: none;
+}

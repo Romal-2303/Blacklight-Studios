@@ -46,20 +46,6 @@ const MainSection = () => {
           </p>
           <GetInTouchBtn />
         </div>
-        {/* 
-        <div className={classes["promotion-card"]}>
-        <div className={classes["promotion-card-child"]}>
-            <p className={classes["card-desc"]}>
-              We are Blacklight Studios – a team of passionate developers,
-              designers, and visionaries dedicated to pushing the boundaries of
-              web technology. From immersive UI/UX to high-performance
-              applications, we deliver excellence with every project. Let's
-              build the future together.
-            </p>
-            <div className={classes["explore-btn"]}>Explore</div>
-            <GetInTouchBtn />
-          </div>
-        </div> */}
       </div>
     </div>
   );

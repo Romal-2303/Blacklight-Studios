@@ -1,0 +1,23 @@
+@use "../../designSystem/library" as *;
+
+.loading_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 64px;
+  z-index: 1000;
+  font-family: $font-primary;
+  font-weight: 700;
+  transition: all linear 0.5s;
+
+  p {
+    width: 100px;
+  }
+}

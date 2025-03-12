@@ -68,51 +68,5 @@
         line-height: 22px;
       }
     }
-
-    .promotion-card {
-      position: absolute;
-      right: 1.5rem;
-      bottom: 1.5rem;
-      height: 225px;
-      width: 385px;
-      border: 1px solid white;
-      clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0 100%, 0% 25%);
-      background-color: white;
-
-      .promotion-card-child {
-        position: absolute;
-        width: 383px;
-        height: 223px;
-        background-color: rgba(28, 28, 28);
-        clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0 100%, 0% 25%);
-
-        .explore-btn {
-          background-color: #ffffff;
-          position: absolute;
-          bottom: 0.6rem;
-          left: 0.6rem;
-          padding: 0.6rem 0rem;
-          border-radius: 4px;
-          font-size: 14px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          gap: 0.2rem;
-          width: 130px;
-          cursor: pointer;
-          color: black;
-        }
-
-        .card-desc {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          text-align: right;
-          font-size: 14px;
-          margin-top: 2.5rem;
-          padding: 0rem 0.6rem;
-        }
-      }
-    }
   }
 }
