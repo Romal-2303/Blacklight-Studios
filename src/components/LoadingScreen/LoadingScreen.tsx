@@ -2,7 +2,6 @@
 
 import { ReactNode, useEffect, useRef, useState } from "react";
 import classes from "./LoadingScreen.module.scss";
-import TextSpinner from "../TextSpinner/TextSpinner";
 
 interface LoadingScreenProps {
   children: ReactNode;
@@ -39,16 +38,12 @@ const LoadingScreen = ({ children }: LoadingScreenProps) => {
         className={classes["loading_container"]}
         style={{
           width: isLoading ? "100vw" : "0vw",
-          // opacity: isLoading ? 100 : 0,
           left: isLoading ? 0 : "-100%",
         }}
       >
         Loading_<p>{loadPercentage}%</p>
       </div>
-      <div>
-        {/* <div style={{ visibility: isLoading ? "hidden" : "visible" }}> */}
-        {children}
-      </div>
+      <div>{children}</div>
     </div>
   );
 };

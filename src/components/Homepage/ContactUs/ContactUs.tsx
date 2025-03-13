@@ -87,7 +87,8 @@ const ContactUs = () => {
         </div>
 
         <div className={classes["copyright-container"]}>
-          © ID Studio Web Agency Ltd.Privacy
+          © Blacklight Studios Ltd.
+          <p>Privacy</p>
           <p>Policy</p>
           <p> Terms & Conditions</p>
         </div>
