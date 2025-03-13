@@ -3,21 +3,26 @@
 import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
 
-const ParticleGroup = () => {
+const ParticleGroup = ({
+  height = window.innerHeight,
+  width = window.innerWidth,
+}) => {
   const mountRef = useRef(null);
 
   useEffect(() => {
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(
       75,
-      window.innerWidth / window.innerHeight,
+      width / height,
+      // window.innerWidth / 600,
       0.1,
       1000
     );
     camera.position.z = 6;
 
     const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(width, height);
+    // renderer.setSize(window.innerWidth, 600);
     mountRef.current.appendChild(renderer.domElement);
 
     // Create particle geometry
@@ -78,7 +83,18 @@ const ParticleGroup = () => {
     };
   }, []);
 
-  return <div ref={mountRef} style={{ width: "100vw", height: "100vh" }} />;
+  return (
+    <div
+      ref={mountRef}
+      style={{
+        width: "100vw",
+        height: "100vh",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    />
+  );
 };
 
 export default ParticleGroup;

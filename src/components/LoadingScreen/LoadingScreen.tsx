@@ -8,7 +8,7 @@ interface LoadingScreenProps {
 }
 
 const LoadingScreen = ({ children }: LoadingScreenProps) => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [loadPercentage, setLoadPercentage] = useState(62);
   const intervalRef = useRef(null);
 

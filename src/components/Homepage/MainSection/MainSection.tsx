@@ -1,14 +1,23 @@
+"use client";
+
 import ParticleGroup from "@/components/ParticleGroup/ParticleGroup";
 import classes from "./MainSection.module.scss";
 import Link from "next/link";
 import styles from "@/designSystem/_classes.module.scss";
 import GetInTouchBtn from "@/components/Homepage/GetInTouchBtn/GetInTouchBtn";
+import useIsMobile from "@/hooks/useIsMobile";
 
 const MainSection = () => {
+  const isMobile = useIsMobile(650);
+
   return (
     <div className={classes["mainsection-container"]}>
       <div className={classes["particle-group-container"]}>
-        <ParticleGroup />
+        {isMobile ? (
+          <ParticleGroup width={400} height={400} />
+        ) : (
+          <ParticleGroup />
+        )}
       </div>
       <div className={classes["sm-links-section"]}>
         <div className={classes["link-holder"]}>
