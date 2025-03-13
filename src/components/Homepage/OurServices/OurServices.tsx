@@ -42,8 +42,15 @@ const OurServices = () => {
   const [btnHovered, setBtnHovered] = useState(false);
   const [hoveredBox, setHoveredBox] = useState<number | null>(null);
 
+  const scrollToSection = (receivedStr: string) => () => {
+    const section = document.getElementById(receivedStr);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <div className={classes["our-services-container"]}>
+    <div id="services" className={classes["our-services-container"]}>
       <div className={classes["our-services-content-container"]}>
         <p className={classes["our-services-heading"]}>Our Services</p>
         <motion.p
@@ -52,13 +59,16 @@ const OurServices = () => {
           transition={{ delay: 0.2, duration: 0.4, ease: "easeOut" }}
           className={classes["our-services-desc"]}
         >
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo et
-          fugiat natus perferendis reiciendis aliquam asperiores quod laboriosam
-          quas, optio tempora, aspernatur impedit modi ab eius quidem, nulla
-          deleniti dignissimos labore. Eius.
+          We offer top-tier web and mobile development, creative design and SEO
+          optimization. Our solutions ensure seamless functionality, high
+          engagement, and maximum visibility to help your business thrive in the
+          digital landscape.
         </motion.p>
       </div>
-      <div className={classes["contact-us-component"]}>
+      <div
+        className={classes["contact-us-component"]}
+        onClick={scrollToSection("contactus")}
+      >
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -107,7 +117,17 @@ const OurServices = () => {
             >{`0${service.id}`}</div>
             <div className={classes["box-body"]}>
               <h3 className={classes["card-title"]}>{service.title}</h3>
-              <p className={classes["card-desc"]}>{service.description}</p>
+              <p
+                className={classes["card-desc"]}
+                style={{
+                  color:
+                    hoveredBox === service.id
+                      ? "#1c1c1c"
+                      : "rgb(179, 179, 179)",
+                }}
+              >
+                {service.description}
+              </p>
             </div>
           </motion.div>
         ))}

@@ -39,27 +39,13 @@ const MainSection = () => {
         <h1 className={classes["hero-text"]}>Building the Future of Web</h1>
         <div className={classes["hero-description-container"]}>
           <p className={classes["hero-description-text"]}>
-            Innovative. Scalable. Future-proof. We craft digital solutions that
-            stand the test of time. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Quibusdam in quae aut libero fugiat architecto
-            itaque. Libero quis ad rem?
+            We craft digital solutions that go beyond aesthetics—designed for
+            performance, impact, and scalability. Whether you're a startup or an
+            enterprise, we turn bold ideas into reality. Let's build something
+            extraordinary together.
           </p>
           <GetInTouchBtn />
         </div>
-        {/* 
-        <div className={classes["promotion-card"]}>
-        <div className={classes["promotion-card-child"]}>
-            <p className={classes["card-desc"]}>
-              We are Blacklight Studios – a team of passionate developers,
-              designers, and visionaries dedicated to pushing the boundaries of
-              web technology. From immersive UI/UX to high-performance
-              applications, we deliver excellence with every project. Let's
-              build the future together.
-            </p>
-            <div className={classes["explore-btn"]}>Explore</div>
-            <GetInTouchBtn />
-          </div>
-        </div> */}
       </div>
     </div>
   );

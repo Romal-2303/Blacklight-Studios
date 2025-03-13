@@ -4,6 +4,10 @@ import classes from "./AboutUs.module.scss";
 import CounterAnimation from "@/components/CounterAnimation/CounterAnimation";
 import { motion } from "framer-motion";
 import { useRef } from "react";
+import FloatingPanelsScene from "./FloatingPanelsScene";
+import ParticleExplosionEffect from "./FloatingPanelsScene";
+import GlassLogoCube from "./FloatingPanelsScene";
+import birdLogo from "../../../assets/icons/bird.jpg";
 
 const AboutUs = () => {
   const aboutUsRef = useRef(null);
@@ -47,7 +51,7 @@ const AboutUs = () => {
       </div>
 
       <div className={classes["about-us-images-container"]}>
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 50, x: -50 }}
           whileInView={{ opacity: 1, y: 0, x: 0 }}
           transition={{ delay: 0.3, duration: 0.4, ease: "easeOut" }}
@@ -64,7 +68,8 @@ const AboutUs = () => {
           whileInView={{ opacity: 1, y: 0, x: 0 }}
           transition={{ delay: 0.3, duration: 0.4, ease: "easeOut" }}
           className={classes["box-3"]}
-        ></motion.div>
+        ></motion.div> */}
+        {/* <GlassLogoCube /> */}
       </div>
     </div>
   );

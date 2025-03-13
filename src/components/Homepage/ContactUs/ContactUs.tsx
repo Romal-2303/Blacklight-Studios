@@ -5,9 +5,10 @@ import classes from "./ContactUs.module.scss";
 import LinkedInIcon from "@/assets/icons/LinkedInIcon";
 import Instagram from "@/assets/icons/Instagram";
 import YoutubeIcon from "@/assets/icons/YoutubeIcon";
-import { useEffect, useState } from "react";
 import Form from "./Form/Form";
 import TextSpinner from "@/components/TextSpinner/TextSpinner";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const ContactUs = () => {
   const [formVisibility, setFormVisibility] = useState(false);
@@ -29,6 +30,10 @@ const ContactUs = () => {
   }, [formVisibility]);
 
   const btnClickHandler = () => {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: "smooth", // Smooth scrolling effect
+    });
     setFormVisibility(true);
   };
 
@@ -41,16 +46,17 @@ const ContactUs = () => {
   };
 
   return (
-    <div className={classes["contact-us-container"]}>
+    <div id="contactus" className={classes["contact-us-container"]}>
       <div className={classes["heading-container"]}>
         <h1 className={classes["section-header"]}>
           One click, endless possibilities—call us!
         </h1>
-        <div
+        <motion.div
           className={classes["lets-talk-btn"]}
           onMouseEnter={mouseEnterHandler}
           onMouseLeave={mouseLeaveHandler}
           onClick={btnClickHandler}
+          whileTap={{ scale: 0.9 }}
         >
           {!btnHovered ? (
             <>Let's Talk</>
@@ -61,14 +67,14 @@ const ContactUs = () => {
               lettersToNotRotate={4}
             ></TextSpinner>
           )}
-        </div>
+        </motion.div>
       </div>
 
       <div className={classes["tags-container"]}>
         <div className={classes["tag-1"]}>Web Design</div>
         <div className={classes["tag-2"]}>E-commerce Development</div>
         <div className={classes["tag-3"]}>Portfolio Websites</div>
-        <div className={classes["tag-3"]}>Organic SEO</div>
+        <div className={classes["tag-3"]}>SEO Optimization</div>
         <div className={classes["tag-3"]}>Website Support & Maintainance</div>
       </div>
 
@@ -86,13 +92,10 @@ const ContactUs = () => {
           <p> Terms & Conditions</p>
         </div>
       </div>
-
-      {
-        <Form
-          formVisbility={formVisibility}
-          setFormVisibility={setFormVisibility}
-        />
-      }
+      <Form
+        formVisbility={formVisibility}
+        setFormVisibility={setFormVisibility}
+      />
     </div>
   );
 };
