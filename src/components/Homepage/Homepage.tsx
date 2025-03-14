@@ -6,6 +6,7 @@ import OurServices from "./OurServices/OurServices";
 import Pricing from "./Pricing/Pricing";
 import Testimonials from "./Testimonials/Testimonials";
 import OurWork from "./OurWork/OurWork";
+import Promotion from "./Promotion/Promotion";
 
 const Homepage = () => {
   return (
@@ -16,6 +17,7 @@ const Homepage = () => {
       <OurWork />
       <Testimonials />
       <Pricing />
+      <Promotion />
       <ContactUs />
     </div>
   );

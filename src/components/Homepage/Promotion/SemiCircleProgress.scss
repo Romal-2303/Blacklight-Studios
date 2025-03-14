@@ -1,0 +1,14 @@
+.semi-circle-container {
+    position: relative;
+    overflow: hidden; // Hides the bottom half
+  }
+  
+  .percentage-text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 35%;
+    font-weight: bold;
+    color: #333;
+  }
+  
