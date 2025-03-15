@@ -12,12 +12,24 @@
   color: white;
   font-family: $font-primary;
 
+  @media screen and (min-width: 300px) and (max-width: 600px) {
+    height: 200px;
+    width: 90%;
+    left: 50%;
+
+    transform: translate(-50%, 0%);
+  }
+
   .cookie-card-child {
     position: absolute;
     width: 448px;
     height: 198px;
     background-color: rgba(28, 28, 28);
     clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0 100%, 0% 25%);
+
+    @media screen and (min-width: 300px) and (max-width: 600px) {
+      width: 100%;
+    }
 
     .accept-btn,
     .reject-btn {
@@ -34,6 +46,10 @@
       width: 130px;
       cursor: pointer;
       color: black;
+
+      @media screen and (min-width: 300px) and (max-width: 600px) {
+        font-size: 12px;
+      }
     }
 
     .accept-btn {
@@ -55,6 +71,10 @@
       margin-top: 3.5rem;
       padding: 0rem 0.6rem;
       line-height: 18px;
+
+      @media screen and (min-width: 300px) and (max-width: 600px) {
+        font-size: 12px;
+      }
 
       u {
         cursor: pointer;

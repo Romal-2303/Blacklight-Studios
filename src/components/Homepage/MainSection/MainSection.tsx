@@ -14,7 +14,7 @@ const MainSection = () => {
     <div className={classes["mainsection-container"]}>
       <div className={classes["particle-group-container"]}>
         {isMobile ? (
-          <ParticleGroup width={400} height={400} />
+          <ParticleGroup width={window.innerWidth} height={400} />
         ) : (
           <ParticleGroup />
         )}

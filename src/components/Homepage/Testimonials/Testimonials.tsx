@@ -4,6 +4,7 @@ import Arrow from "@/assets/icons/Arrow";
 import classes from "./Testimonials.module.scss";
 import { Fragment, useState } from "react";
 import { motion } from "framer-motion";
+import useIsMobile from "@/hooks/useIsMobile";
 
 let testimonialsArr = [
   {
@@ -45,6 +46,7 @@ let testimonialsArr = [
 
 const Testimonials = () => {
   const [activeCardIndex, setActiveCardIndex] = useState(0);
+  const isMobile = useIsMobile(650);
 
   const leftClickHandler = () => {
     setActiveCardIndex((prevIndex) => {
@@ -74,13 +76,15 @@ const Testimonials = () => {
     <div className={classes["testimonials-container"]}>
       <p className={classes["testimonials-header"]}>Testimonials</p>
       <div className={classes["testimonials-content-container"]}>
-        <motion.button
-          className={classes["arrow-container"]}
-          onClick={leftClickHandler}
-          whileTap={{ scale: 0.9 }}
-        >
-          <Arrow width="16" height="16" color="white" rotation={90} />
-        </motion.button>
+        {!isMobile && (
+          <motion.button
+            className={classes["arrow-container"]}
+            onClick={leftClickHandler}
+            whileTap={{ scale: 0.9 }}
+          >
+            <Arrow width="16" height="16" color="white" rotation={90} />
+          </motion.button>
+        )}
 
         <div className={classes["testimony-container"]}>
           {testimonialsArr.map((el, cardIndex) => (
@@ -114,14 +118,15 @@ const Testimonials = () => {
               ))}
           </div>
         </div>
-
-        <motion.button
-          className={classes["arrow-container"]}
-          onClick={rightClickHandler}
-          whileTap={{ scale: 0.9 }}
-        >
-          <Arrow width="16" height="16" color="white" rotation={-90} />
-        </motion.button>
+        {!isMobile && (
+          <motion.button
+            className={classes["arrow-container"]}
+            onClick={rightClickHandler}
+            whileTap={{ scale: 0.9 }}
+          >
+            <Arrow width="16" height="16" color="white" rotation={-90} />
+          </motion.button>
+        )}
       </div>
     </div>
   );

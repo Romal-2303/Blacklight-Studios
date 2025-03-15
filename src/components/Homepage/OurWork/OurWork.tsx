@@ -7,8 +7,16 @@ import ecommerceImg from "../../../assets/images/e_commerce1.png";
 import cryptoImg from "../../../assets/images/crypto1.png";
 import marketingImg from "../../../assets/images/marketing.png";
 import realEstateImg from "../../../assets/images/real_estate.png";
+import useIsMobile from "@/hooks/useIsMobile";
+import { useState } from "react";
 
 const OurWork = () => {
+  const isMobile = useIsMobile(650);
+
+  const visitLinkHandler = (url: string) => () => {
+    window.open(url, "_blank");
+  };
+
   return (
     <div id="ourwork" className={classes["our-work-container"]}>
       <div className={classes["our-work-title"]}>
@@ -28,10 +36,15 @@ const OurWork = () => {
           <HoverableCard
             title="Velvo"
             description="Seamless, high-performance eCommerce web app designed for effortless shopping and maximum conversions."
-            imgLink={ecommerceImg.src}
+            imgLink={
+              "https://marketingpicbucket.s3.eu-north-1.amazonaws.com/e_commerce1.png"
+            }
+            receivedLink="https://e-commerce-789.netlify.app/"
+            videoLink="https://marketingpicbucket.s3.eu-north-1.amazonaws.com/1741812710508496.mp4"
           />
           <p
             className={`${classes["visit-text"]} ${styles["underline-on-hover"]}`}
+            onClick={visitLinkHandler("https://e-commerce-789.netlify.app/")}
           >
             Visit Velvo
           </p>
@@ -41,10 +54,16 @@ const OurWork = () => {
             <HoverableCard
               title="Cryptify"
               description="A cutting-edge website that elevates your crypto platform’s presence with trust and innovation."
-              imgLink={cryptoImg.src}
+              imgLink={
+                "https://marketingpicbucket.s3.eu-north-1.amazonaws.com/crypto1.png"
+              }
+              receivedLink="https://crypto-website-weld.vercel.app/"
             />
             <p
               className={`${classes["visit-text"]} ${styles["underline-on-hover"]}`}
+              onClick={visitLinkHandler(
+                "https://crypto-website-weld.vercel.app/"
+              )}
             >
               Visit Cryptify
             </p>
@@ -53,10 +72,16 @@ const OurWork = () => {
             <HoverableCard
               title="Redmail"
               description="A high-converting marketing website crafted to captivate audiences and drive business growth."
-              imgLink={marketingImg.src}
+              imgLink={
+                "https://marketingpicbucket.s3.eu-north-1.amazonaws.com/marketing.png"
+              }
+              receivedLink="https://marketting-website-ten.vercel.app/"
             />
             <p
               className={`${classes["visit-text"]} ${styles["underline-on-hover"]}`}
+              onClick={visitLinkHandler(
+                "https://marketting-website-ten.vercel.app/"
+              )}
             >
               Visit Redmail
             </p>
@@ -66,10 +91,16 @@ const OurWork = () => {
           <HoverableCard
             title="Realo"
             description="An intuitive real estate platform designed for seamless property browsing and lead generation."
-            imgLink={realEstateImg.src}
+            imgLink={
+              "https://marketingpicbucket.s3.eu-north-1.amazonaws.com/real_estate.png"
+            }
+            receivedLink="https://real-estate-website-eight-alpha.vercel.app/"
           />
           <p
             className={`${classes["visit-text"]} ${styles["underline-on-hover"]}`}
+            onClick={visitLinkHandler(
+              "https://real-estate-website-eight-alpha.vercel.app/"
+            )}
           >
             Visit Realo
           </p>

@@ -4,8 +4,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
   color: white;
   background-color: black;
   display: flex;
@@ -19,5 +19,9 @@
 
   p {
     width: 100px;
+  }
+
+  @media screen and (min-width: 300px) and (max-width: 600px) {
+    font-size: 40px;
   }
 }

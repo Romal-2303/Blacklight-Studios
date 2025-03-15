@@ -3,7 +3,6 @@
 import Tick from "@/assets/icons/Tick";
 import classes from "./Pricing.module.scss";
 import { motion } from "framer-motion";
-import { useState } from "react";
 
 let pricingArr = [
   {

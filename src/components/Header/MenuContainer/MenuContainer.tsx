@@ -28,6 +28,7 @@ const MenuContainer = () => {
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
+    setMenuVisibility(false);
   };
 
   const menuClickHandler = () => {

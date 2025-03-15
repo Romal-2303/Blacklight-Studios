@@ -17,6 +17,11 @@
     font-weight: 300;
     line-height: 28px;
     font-family: $font-secondary;
+
+    @media screen and (min-width: 300px) and (max-width: 600px) {
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 
   .arrow-container {
@@ -31,6 +36,13 @@
     justify-content: center;
     align-items: center;
     z-index: 11;
+
+    @media screen and (min-width: 300px) and (max-width: 600px) {
+      right: 0.5rem;
+      bottom: 0.5rem;
+      width: 30px;
+      height: 30px;
+    }
   }
 
   .overlay-screen {
@@ -43,7 +55,8 @@
     z-index: 10;
   }
 
-  img {
+  img,
+  video {
     height: 100%;
     width: 100%;
     border-radius: 4px;

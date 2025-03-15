@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import classes from "./OurServices.module.scss";
 import { motion } from "framer-motion";
 import TextSpinner from "@/components/TextSpinner/TextSpinner";
+import useIsMobile from "@/hooks/useIsMobile";
 
 const services = [
   {
@@ -39,6 +40,7 @@ const services = [
 ];
 
 const OurServices = () => {
+  const isMobile = useIsMobile(650);
   const [btnHovered, setBtnHovered] = useState(false);
   const [hoveredBox, setHoveredBox] = useState<number | null>(null);
 
@@ -84,54 +86,107 @@ const OurServices = () => {
           )}
         </motion.div>
       </div>
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className={classes["list-box-container"]}
-      >
-        {services.map((service) => (
-          <motion.div
-            key={service.id}
-            className={classes["box"]}
-            onMouseEnter={() => setHoveredBox(service.id)}
-            onMouseLeave={() => setHoveredBox(null)}
-            style={{
-              backgroundColor:
-                hoveredBox === service.id ? "white" : "transparent",
-              color: hoveredBox === service.id ? "#1c1c1c" : "white",
-              transition:
-                "background-color 0.6s ease-in-out, color 0.6s ease-in-out",
-              cursor: "pointer",
-            }}
-          >
-            <div
-              className={classes["number-container"]}
+
+      {isMobile ? (
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className={classes["services-cards-container"]}
+        >
+          {services.map((service) => (
+            <motion.div
+              key={service.id}
+              className={classes["card-container"]}
+              onMouseEnter={() => setHoveredBox(service.id)}
+              onMouseLeave={() => setHoveredBox(null)}
               style={{
                 backgroundColor:
-                  hoveredBox === service.id ? "#1c1c1c" : "#07c569",
-                color: hoveredBox === service.id ? "white" : "#1c1c1c",
+                  hoveredBox === service.id ? "white" : "transparent",
+                color: hoveredBox === service.id ? "#1c1c1c" : "white",
                 transition:
                   "background-color 0.6s ease-in-out, color 0.6s ease-in-out",
+                cursor: "pointer",
               }}
-            >{`0${service.id}`}</div>
-            <div className={classes["box-body"]}>
-              <h3 className={classes["card-title"]}>{service.title}</h3>
-              <p
-                className={classes["card-desc"]}
+            >
+              <div
+                className={classes["number-container"]}
                 style={{
-                  color:
-                    hoveredBox === service.id
-                      ? "#1c1c1c"
-                      : "rgb(179, 179, 179)",
+                  backgroundColor:
+                    hoveredBox === service.id ? "#1c1c1c" : "#07c569",
+                  color: hoveredBox === service.id ? "white" : "#1c1c1c",
+                  transition:
+                    "background-color 0.6s ease-in-out, color 0.6s ease-in-out",
                 }}
-              >
-                {service.description}
-              </p>
-            </div>
-          </motion.div>
-        ))}
-      </motion.div>
+              >{`0${service.id}`}</div>
+
+              <div className={classes["card-content"]}>
+                <h3 className={classes["card-title"]}>{service.title}</h3>
+                <p
+                  className={classes["card-desc"]}
+                  style={{
+                    color:
+                      hoveredBox === service.id
+                        ? "#1c1c1c"
+                        : "rgb(179, 179, 179)",
+                  }}
+                >
+                  {service.description}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      ) : (
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className={classes["list-box-container"]}
+        >
+          {services.map((service) => (
+            <motion.div
+              key={service.id}
+              className={classes["box"]}
+              onMouseEnter={() => setHoveredBox(service.id)}
+              onMouseLeave={() => setHoveredBox(null)}
+              style={{
+                backgroundColor:
+                  hoveredBox === service.id ? "white" : "transparent",
+                color: hoveredBox === service.id ? "#1c1c1c" : "white",
+                transition:
+                  "background-color 0.6s ease-in-out, color 0.6s ease-in-out",
+                cursor: "pointer",
+              }}
+            >
+              <div
+                className={classes["number-container"]}
+                style={{
+                  backgroundColor:
+                    hoveredBox === service.id ? "#1c1c1c" : "#07c569",
+                  color: hoveredBox === service.id ? "white" : "#1c1c1c",
+                  transition:
+                    "background-color 0.6s ease-in-out, color 0.6s ease-in-out",
+                }}
+              >{`0${service.id}`}</div>
+              <div className={classes["box-body"]}>
+                <h3 className={classes["card-title"]}>{service.title}</h3>
+                <p
+                  className={classes["card-desc"]}
+                  style={{
+                    color:
+                      hoveredBox === service.id
+                        ? "#1c1c1c"
+                        : "rgb(179, 179, 179)",
+                  }}
+                >
+                  {service.description}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      )}
     </div>
   );
 };

@@ -3,9 +3,11 @@
 import classes from "./GetInTouchBtn.module.scss";
 import SharpArrowWithTail from "@/assets/icons/SharpArrowWithTail";
 import TextSpinner from "@/components/TextSpinner/TextSpinner";
+import useIsMobile from "@/hooks/useIsMobile";
 import { useState } from "react";
 
 const GetInTouchBtn = () => {
+  const isMobile = useIsMobile(650);
   const [btnHovered, setBtnHovered] = useState(false);
 
   const mouseEnterHandler = () => {
@@ -36,7 +38,10 @@ const GetInTouchBtn = () => {
         <TextSpinner speed={50} content="Get In Touch"></TextSpinner>
       )}
       <div className={classes["arrow-container"]}>
-        <SharpArrowWithTail />
+        <SharpArrowWithTail
+          height={isMobile ? "16" : "18"}
+          width={isMobile ? "16" : "18"}
+        />
       </div>
     </div>
   );

@@ -6,9 +6,18 @@
   height: 350px;
   overflow-x: hidden;
 
+  @media screen and (min-width: 300px) and (max-width: 600px) {
+    padding: 0rem 1rem;
+    margin-top: -2rem;
+  }
+
   .testimonials-header {
     font-size: 64px;
     color: white;
+
+    @media screen and (min-width: 300px) and (max-width: 600px) {
+      font-size: 44px;
+    }
   }
 
   .testimonials-content-container {
@@ -17,6 +26,10 @@
     align-items: center;
     width: 100%;
     margin-top: 2rem;
+
+    @media screen and (min-width: 300px) and (max-width: 600px) {
+      margin-top: -0.5rem;
+    }
 
     .arrow-container {
       border: 1px solid white;
@@ -30,6 +43,11 @@
       transition: all linear 0.2s;
       cursor: pointer;
       z-index: 12;
+
+      @media screen and (min-width: 300px) and (max-width: 600px) {
+        height: 30px;
+        width: 30px;
+      }
 
       &:hover {
         background-color: white;
@@ -51,6 +69,10 @@
       height: 200px;
       z-index: 11;
 
+      @media screen and (min-width: 300px) and (max-width: 600px) {
+        height: 250px;
+      }
+
       .testimonial-card {
         position: absolute;
         top: 50%;
@@ -62,10 +84,19 @@
         font-family: $font-secondary;
         transition: all linear 0.3s;
 
+        @media screen and (min-width: 300px) and (max-width: 600px) {
+          padding: 0rem 1rem;
+        }
+
         .comment {
           font-weight: 400;
           font-size: 30px;
           line-height: 36px;
+
+          @media screen and (min-width: 300px) and (max-width: 600px) {
+            font-size: 20px;
+            line-height: 24px;
+          }
         }
 
         .name {
@@ -88,6 +119,10 @@
         gap: 1rem;
         margin-top: 200px;
         width: 200px;
+
+        @media screen and (min-width: 300px) and (max-width: 600px) {
+          margin-top: 250px;
+        }
 
         .dot {
           border-radius: 50%;

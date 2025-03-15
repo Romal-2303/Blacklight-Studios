@@ -9,8 +9,10 @@ import Form from "./Form/Form";
 import TextSpinner from "@/components/TextSpinner/TextSpinner";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import useIsMobile from "@/hooks/useIsMobile";
 
 const ContactUs = () => {
+  const isMobile = useIsMobile(650);
   const [formVisibility, setFormVisibility] = useState(false);
   const [btnHovered, setBtnHovered] = useState(false);
 
@@ -30,10 +32,10 @@ const ContactUs = () => {
   }, [formVisibility]);
 
   const btnClickHandler = () => {
-    window.scrollTo({
-      top: document.body.scrollHeight,
-      behavior: "smooth", // Smooth scrolling effect
-    });
+    // window.scrollTo({
+    //   top: document.documentElement.scrollHeight,
+    //   behavior: "smooth",
+    // });
     setFormVisibility(true);
   };
 
@@ -48,9 +50,15 @@ const ContactUs = () => {
   return (
     <div id="contactus" className={classes["contact-us-container"]}>
       <div className={classes["heading-container"]}>
-        <h1 className={classes["section-header"]}>
-          One click, endless possibilities—call us!
-        </h1>
+        {!isMobile ? (
+          <h1 className={classes["section-header"]}>
+            One click, endless possibilities—call us!
+          </h1>
+        ) : (
+          <h1 className={classes["section-header"]}>
+            One click, <br /> endless possibilities — call us!
+          </h1>
+        )}
         <motion.div
           className={classes["lets-talk-btn"]}
           onMouseEnter={mouseEnterHandler}
@@ -87,10 +95,12 @@ const ContactUs = () => {
         </div>
 
         <div className={classes["copyright-container"]}>
-          © Blacklight Studios Ltd.
-          <p>Privacy</p>
-          <p>Policy</p>
-          <p> Terms & Conditions</p>
+          <div>© Blacklight Studios Ltd.</div>
+          <div className={classes["privacy-terms-conditions-container"]}>
+            <p>Privacy</p>
+            <p>Policy</p>
+            <p> Terms & Conditions</p>
+          </div>
         </div>
       </div>
       <Form
