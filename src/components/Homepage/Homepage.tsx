@@ -12,13 +12,12 @@ const Homepage = () => {
   return (
     <div className={classes["homepage-container"]}>
       <MainSection />
-      <AboutUs />
+      {/* <AboutUs />
       <OurServices />
       <OurWork />
       <Testimonials />
       <Pricing />
-      <Promotion />
-      <ContactUs />
+      <ContactUs /> */}
     </div>
   );
 };

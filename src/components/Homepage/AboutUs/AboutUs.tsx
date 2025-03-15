@@ -1,13 +1,10 @@
 "use client";
 
 import classes from "./AboutUs.module.scss";
-import CounterAnimation from "@/components/CounterAnimation/CounterAnimation";
 import { motion } from "framer-motion";
 import { useRef } from "react";
-import FloatingPanelsScene from "./FloatingPanelsScene";
-import ParticleExplosionEffect from "./FloatingPanelsScene";
-import GlassLogoCube from "./FloatingPanelsScene";
-import birdLogo from "../../../assets/icons/bird.jpg";
+import CounterAnimation from "@/components/CounterAnimation/CounterAnimation";
+import FloatingBox from "@/components/Homepage/AboutUs/FloatingPanelsScene";
 
 const AboutUs = () => {
   const aboutUsRef = useRef(null);
@@ -27,26 +24,29 @@ const AboutUs = () => {
           dolor sit amet consectetur, adipisicing elit. Ullam, repellat?
         </motion.p>
         <div className={classes["achievements-highlight-section"]}>
-          <div className={classes["achievement-box"]}>
-            <p className={classes["counter"]}>10 </p>
-            <span className={classes["achievement-text"]}>
-              Years Of Experience
-            </span>
+          {/* - Is you website standing in the way of your marketing goals ? 
+          - We’ve
+          helped brands scale. What’s stopping yours? */}
+          {/* <div className={classes["achievement-box"]}>
+            <p className={classes["counter"]}>15+ </p>
+            <span className={classes["achievement-text"]}>Happy Clients</span>
           </div>
           <div className={classes["achievement-box"]}>
-            <p className={classes["counter"]}>18 </p>
+            <p className={classes["counter"]}>5+ </p>
             <span className={classes["achievement-text"]}>
               Skilled Professionals
             </span>
           </div>
           <div className={classes["achievement-box"]}>
-            <p className={classes["counter-big"]}>
-              <CounterAnimation maxNumber={100} containerRef={aboutUsRef} />+
-            </p>
+            <p className={classes["counter-big"]}>99% </p>
             <span className={classes["achievement-text"]}>
-              Projects Worldwide
+              Client Satisfaction
             </span>
-          </div>
+          </div> */}
+
+          <p>- Growing Fast with 15+ Happy Clients</p>
+          <p>- A Dedicated Team of Experts</p>
+          <p>- Delivering Excellence – 99% Client Satisfaction</p>
         </div>
       </div>
 
@@ -69,7 +69,7 @@ const AboutUs = () => {
           transition={{ delay: 0.3, duration: 0.4, ease: "easeOut" }}
           className={classes["box-3"]}
         ></motion.div> */}
-        {/* <GlassLogoCube /> */}
+        <FloatingBox />
       </div>
     </div>
   );

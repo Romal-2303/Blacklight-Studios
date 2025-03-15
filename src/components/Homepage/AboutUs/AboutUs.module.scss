@@ -4,7 +4,7 @@
   display: flex;
   gap: 1rem;
   padding: 0rem 2rem;
-  height: 500px;
+  height: fit-content;
   color: white;
 
   .about-us-content-container {
@@ -23,9 +23,14 @@
     }
 
     .achievements-highlight-section {
-      display: flex;
       gap: 2rem;
       margin-top: 4rem;
+      color: $primary-200;
+      font-size: 18px;
+
+      p {
+        margin-top: 1rem;
+      }
 
       .achievement-box {
         display: flex;
@@ -49,8 +54,14 @@
   }
 
   .about-us-images-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex: 1;
+    width: 400px;
+    height: 400px;
     position: relative;
+    padding-top: 3rem;
 
     .box-1,
     .box-2,
