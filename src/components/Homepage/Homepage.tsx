@@ -6,17 +6,19 @@ import OurServices from "./OurServices/OurServices";
 import Pricing from "./Pricing/Pricing";
 import Testimonials from "./Testimonials/Testimonials";
 import OurWork from "./OurWork/OurWork";
+import Promotion from "./Promotion/Promotion";
 
 const Homepage = () => {
   return (
     <div className={classes["homepage-container"]}>
       <MainSection />
-      {/* <AboutUs />
+      <AboutUs />
       <OurServices />
       <OurWork />
       <Testimonials />
       <Pricing />
-      <ContactUs /> */}
+      <Promotion />
+      <ContactUs />
     </div>
   );
 };

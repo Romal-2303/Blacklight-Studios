@@ -1,0 +1,48 @@
+@use "@/designSystem/library" as *;
+
+.promotion-motion {
+    color: white;
+    margin-top: 6rem;
+    padding: 0rem 2rem;
+
+    .promotion-heading {
+        font-size: 64px;
+        width: 40%;
+    }
+
+    .promotion-subheading {
+        margin-top: 25px;
+        font-family: $font-secondary;
+        color: $gray-600;
+
+    }
+
+    .promotion-details {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin-top: 1rem;
+
+        .health-score-container {
+            width: 50%;
+            .health-score-heading{
+                
+            }
+            .health-score-subheading{
+                color: $gray-600;
+            }
+        }
+
+        .technical-issues-container {
+            width: 50%;
+            .technical-issues-heading{
+
+            }
+            .technical-issues-subheading{
+                color: $gray-600;
+            }
+
+        }
+    }
+
+}
